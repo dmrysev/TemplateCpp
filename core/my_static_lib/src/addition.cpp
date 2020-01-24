@@ -1,7 +1,7 @@
-#include "my_library.h"
+#include "my_static_lib/addition.hpp"
 #include <iostream>
 
-namespace MyStaticLib {
+namespace MyProject::MyStaticLib::Addition {
 
 double add2(double input) {
     auto a = input + 2;

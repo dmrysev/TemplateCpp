@@ -1,0 +1,4 @@
+set(SUBPROJECT_NAME ${PROJECT_NAME}DynamicLib)
+file(GLOB_RECURSE SRC_LIST *.cpp *.hpp)
+add_library(${SUBPROJECT_NAME} SHARED ${SRC_LIST})
+target_include_directories(${SUBPROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

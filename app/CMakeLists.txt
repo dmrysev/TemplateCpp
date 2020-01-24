@@ -1,8 +1,8 @@
-file(GLOB_RECURSE SRC_LIST *.cpp *.h)
+file(GLOB_RECURSE SRC_LIST *.cpp *.hpp)
 add_executable(${PROJECT_NAME} ${SRC_LIST})
 
 target_link_libraries(${PROJECT_NAME}
-    ${PROJECT_NAME}Core)
+    ${PROJECT_NAME}MyStaticLib)
 
 target_compile_options(${PROJECT_NAME} 
     PRIVATE 
