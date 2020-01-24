@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.6)
-get_filename_component(ProjectId ${CMAKE_CURRENT_SOURCE_DIR} NAME)
-string(REPLACE " " "_" ProjectId ${ProjectId})
-project(${ProjectId} LANGUAGES CXX)
+project(MyProject LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/ext")
@@ -15,5 +13,6 @@ include_directories(BEFORE "${CMAKE_CURRENT_SOURCE_DIR}/ext/include")
 
 add_subdirectory(app)
 add_subdirectory(core/my_static_lib)
+add_subdirectory(core/my_dynamic_lib)
 add_subdirectory(test)
 add_subdirectory(ext EXCLUDE_FROM_ALL)
