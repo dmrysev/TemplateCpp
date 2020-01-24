@@ -33,3 +33,7 @@
 
 build/
 .vscode
+ext/include
+ext/lib
+ext/bin
+ext/cmake
