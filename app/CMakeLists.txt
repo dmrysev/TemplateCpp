@@ -6,6 +6,8 @@ target_link_libraries(${PROJECT_NAME}
         ${PROJECT_NAME}::MyStaticLib
         ${PROJECT_NAME}::MyDynamicLib)
 
+set_target_properties(${PROJECT_NAME} PROPERTIES LINK_DEPENDS_NO_SHARED true)
+
 target_compile_options(${PROJECT_NAME} 
     PRIVATE 
         -Wall -Wextra -pedantic -Wconversion
