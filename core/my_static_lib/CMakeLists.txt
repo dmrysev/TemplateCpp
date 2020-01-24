@@ -1,5 +1,6 @@
 set(SUBPROJECT_NAME ${PROJECT_NAME}MyStaticLib)
 file(GLOB_RECURSE SRC_LIST src/*.cpp src/*.hpp)
 add_library(${SUBPROJECT_NAME} STATIC ${SRC_LIST})
+add_library(${PROJECT_NAME}::MyStaticLib ALIAS ${PROJECT_NAME}MyStaticLib)
 target_include_directories(${SUBPROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_include_directories(${SUBPROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
