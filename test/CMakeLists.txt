@@ -7,6 +7,7 @@ add_executable(${SUBPRROJECT_NAME} ${SRC_LIST})
 target_link_libraries(${SUBPRROJECT_NAME}
     PRIVATE
         ${PROJECT_NAME}MyStaticLib
+        ${PROJECT_NAME}::MyDynamicLib
         ${GTEST_BOTH_LIBRARIES}
         ${GMOCK_BOTH_LIBRARIES})
 
